@@ -11,9 +11,17 @@ body {
   font-family: Arial, sans-serif;
   background-image: linear-gradient(#242323, rgb(58, 58, 58));
   height: 5000px;
+  color: whitesmoke;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.2rem;
 }
 
 /* * Header */
+
 nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
@@ -55,12 +63,7 @@ a:active {
 /* ** Main */
 
 main {
-  margin: 7rem 0 auto 6rem;
-}
-
-main h1,
-main h2 {
-  color: #f2f2f2;
+  margin: 7rem 0 auto 3rem;
 }
 
 main h1 {
@@ -70,4 +73,24 @@ main h1 {
 
 main h2 {
   font-size: 2rem;
+}
+
+/* *** About Me */
+
+/* **** Skills */
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+#skills img {
+  max-width: 25%;
+  height: auto;
+}
+
+.css-logo {
+  width: 18%;
+  margin-right: 2rem;
 }
