@@ -5,6 +5,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,8 +27,7 @@ nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-content: flex-end;
-  margin-right: 35px;
-  margin-top: 35px;
+  margin: 35px;
 }
 
 ul {
@@ -35,11 +35,11 @@ ul {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
 }
 
 li {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 a {
@@ -63,12 +63,12 @@ a:active {
 /* ** Main */
 
 main {
-  margin: 7rem 0 auto 3rem;
+  margin: 15rem 0 2rem 2.5rem;
 }
 
 main h1 {
   font-size: 4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 main h2 {
@@ -77,20 +77,49 @@ main h2 {
 
 /* *** About Me */
 
+#about {
+  margin-top: 500px;
+}
+
+.info {
+  padding: 35px 40px 25px 40px;
+}
+
+.info p {
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .info p {
+    font-size: 2rem;
+  }
+}
+
 /* **** Skills */
+
+#skills {
+  margin-top: 300px;
+}
 
 .languages {
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  justify-content: space-evenly;
+  margin-top: 35px;
+  margin-left: 50px;
 }
 
 #skills img {
-  max-width: 25%;
+  max-width: 10%;
   height: auto;
 }
 
 .css-logo {
-  width: 18%;
+  width: 8%;
   margin-right: 2rem;
+}
+
+/* ***** Projects */
+
+#projects {
+  margin-top: 275px;
 }
