@@ -11,7 +11,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   background-image: linear-gradient(#242323, rgb(58, 58, 58));
-  height: 5000px;
+  height: 3000px;
   color: whitesmoke;
 }
 
@@ -40,6 +40,12 @@ ul {
 
 li {
   font-size: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  li {
+    font-size: 1.45rem;
+  }
 }
 
 a {
