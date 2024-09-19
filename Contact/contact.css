@@ -21,23 +21,47 @@ header {
   justify-content: space-between;
 }
 
+header h1 {
+  margin-left: 25px;
+}
+
 a {
   color: whitesmoke;
   text-decoration: none;
   cursor: pointer;
   margin-top: 3px;
+  margin-right: 25px;
 }
 
 a:hover {
   color: lightgreen;
 }
 
+.container {
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
 .contacts,
 .email {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   gap: 1vw;
+}
+
+.phone-num,
+.gmail,
+.tel,
+.mail-info,
+.github-name {
+  font-size: 2.5rem;
+}
+
+.phone-num,
+.gmail,
+.github-name {
+  font-weight: bold;
+  margin-top: 2px;
 }
 
 .github-account {
@@ -48,9 +72,12 @@ a:hover {
 }
 
 .github {
-  width: 50px;
+  width: 4rem;
+  margin-top: 25px;
+  margin-left: 30px;
 }
 
 .github-name {
   display: none;
+  margin-top: 35px;
 }
