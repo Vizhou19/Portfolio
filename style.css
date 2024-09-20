@@ -11,7 +11,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   background-image: linear-gradient(#242323, rgb(58, 58, 58));
-  height: 2500px;
+  height: 5000px;
   color: whitesmoke;
 }
 
@@ -120,6 +120,18 @@ main h2 {
   justify-content: space-evenly;
   margin-top: 35px;
   margin-left: 10px;
+  animation: showCase 10s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes showCase {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 #skills img {
@@ -136,4 +148,17 @@ main h2 {
 
 #projects {
   margin-top: 50px;
+}
+
+#projects img {
+  width: 300px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.projects-desc {
+  display: none;
 }
