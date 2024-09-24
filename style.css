@@ -6,11 +6,23 @@
 :root {
   --primary-color: #242323;
   --secondary-color: whitesmoke;
+  --gradient-color: rgb(58, 58, 58);
+  --third-color: #333;
+  --link-color: lightskyblue;
+  --hover-color: lightgreen;
+  --about-color: #414242;
+  --skills-color: #585858;
 }
 
 .light-mode {
-  --primary-color: rgb(255, 254, 242);
+  --primary-color: rgb(255, 254, 248);
   --secondary-color: #000106;
+  --gradient-color: rgb(255, 254, 248);
+  --third-color: rgb(209, 208, 198);
+  --link-color: rgb(43, 174, 255);
+  --hover-color: rgb(100, 250, 100);
+  --about-color: whitesmoke;
+  --skills-color: rgb(233, 231, 216);
 }
 
 html {
@@ -20,7 +32,10 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(var(--primary-color), rgb(58, 58, 58));
+  background-image: linear-gradient(
+    var(--primary-color),
+    var(--gradient-color)
+  );
   height: 5000px;
   color: var(--secondary-color);
 }
@@ -34,8 +49,71 @@ h3 {
 /* * Header */
 
 header {
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: var(--third-color);
   border-bottom: 1px solid rgb(170, 170, 170);
+  margin-top: -30px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: 70px;
+  left: 50px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 nav {
@@ -65,11 +143,11 @@ li {
 
 a {
   text-decoration: none;
-  color: lightskyblue;
+  color: var(--link-color);
 }
 
 a:hover {
-  color: lightgreen;
+  color: var(--hover-color);
   cursor: pointer;
   text-shadow: 0 0 60px 30px lightgreen;
   transition: color 500ms ease-in;
@@ -100,7 +178,7 @@ main h2 {
 #about {
   margin-top: 500px;
   padding-top: 35px;
-  background-color: #414242;
+  background-color: var(--about-color);
   border-bottom: 1px solid rgb(170, 170, 170);
   border-top: 1px solid rgb(170, 170, 170);
 }
@@ -125,7 +203,7 @@ main h2 {
   padding-top: 30px;
   padding-bottom: 30px;
   overflow: hidden;
-  background-color: #585858;
+  background-color: var(--skills-color);
   border-bottom: 1px solid rgb(170, 170, 170);
 }
 

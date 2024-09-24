@@ -21,3 +21,10 @@ calcImg.addEventListener("mouseover", function () {
 calcImg.addEventListener("mouseout", function () {
   calcName.style.display = "none";
 });
+
+//** Switcher
+let switcher = document.getElementById("switcher");
+
+switcher.addEventListener("click", function () {
+  document.body.classList.toggle("light-mode");
+});
