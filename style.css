@@ -22,7 +22,7 @@
   --link-color: rgb(43, 174, 255);
   --hover-color: rgb(100, 250, 100);
   --about-color: whitesmoke;
-  --skills-color: rgb(233, 231, 216);
+  --skills-color: rgb(255, 254, 247);
 }
 
 html {
@@ -36,7 +36,7 @@ body {
     var(--primary-color),
     var(--gradient-color)
   );
-  height: 5000px;
+  height: 3500px;
   color: var(--secondary-color);
 }
 
@@ -95,11 +95,11 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #222629;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #e5e9ec;
 }
 
 input:checked + .slider:before {
