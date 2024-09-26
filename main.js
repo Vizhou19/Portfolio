@@ -28,3 +28,20 @@ let switcher = document.getElementById("switcher");
 switcher.addEventListener("click", function () {
   document.body.classList.toggle("light-mode");
 });
+
+//*** DropDown (For Mobile)
+const dropdownButton = document.querySelector(".dropbtn");
+const dropdownContent = document.querySelector(".dropdown-content");
+
+dropdownButton.addEventListener("click", () => {
+  dropdownContent.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    !dropdownButton.contains(e.target) &&
+    !dropdownContent.contains(e.target)
+  ) {
+    dropdownContent.classList.remove("show");
+  }
+});
